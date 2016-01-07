@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="eng-us" ng-app="weatherApp">
+	<head>
+		<title>Weather App</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/app-styles.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/spinner.css">
+	</head>
+<body>
+
+    <div  class="overlay"  data-loading>
+      <div class="loading-spinner"></div>
+    </div>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#/">Angular Weather App</a>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#/start">Enter City and Days</a></li>
+            <li><a href="#/forecast">Forecast Results</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  <div class="container">
+    
+  <div ng-view>
+    
+  </div>
+
+<div class="panel panel-default ex-margin-top">
+  <div class="panel-body">
+      <div ng-class="{on:plea}" class="highlight">Highlight this box</div>
+  </div>
+  <div class="panel-footer"><button class="btn btn-warning" ng-click="plea=!plea">Toggle</button></div>
+</div>
+
+
+</div><!-- / container -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-resource.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.1/angular-animate.js"></script>
+    <!-- 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-messages.js"></script>
+   
+    -->
+    <script src="app.js"></script>
+    <script src="services.js"></script>
+
+</body>
+</html>

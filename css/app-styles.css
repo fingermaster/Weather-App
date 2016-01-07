@@ -1,0 +1,50 @@
+.big-num {
+  float: left;
+  width: 5rem;
+  font-size: 2rem;
+  margin: .5rem 1rem 0 0;
+  padding: 0 0 0 6px;
+}
+.edit-choice {
+  font-size: 2.2rem !important;
+  margin-left: 4rem;
+}
+.col-md-2 {
+    box-sizing: border-box;
+    border: 1px solid #999;
+    cursor: pointer;
+    margin: 1rem;
+    padding-bottom: 1.2rem;
+}
+.ellipsis {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.chosen-item { 
+  color: red;
+  border-color: red;
+  animation: pulse .5s 1; 
+  -webkit-animation: pulse .5s 1;
+  -webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
+  backface-visibility: hidden;
+}
+
+.highlight {
+  transition:0.5s linear all;
+  padding: 2rem;
+  border-radius: 4px; 
+}
+.highlight.on-add {
+  background: #336699;
+}
+.highlight.on {
+  background: #ccc;
+}
+.highlight.on-remove {
+  background:#666;
+}
+.ex-margin-top {
+  margin-top: 5rem !important;
+}

@@ -1,0 +1,18 @@
+<hr>
+<hr> <!-- <input type="text" class="form-control big-num" ng-model="days" ng-change="change()">  -->
+<h1 ng-cloak>{{ weatherResult.city.name || "--" }} {{ weatherResult.city.country }}: {{ days || "--"}} day forecast<a href="#/start" class="edit-choice">Change</a></h1>
+<div class="row">
+	<div ng-repeat="w in weatherResult.list"
+		 id="{{$index}}"
+		 ng-class="{ 'bounceIn chosen-item': $index == selectedIndex }"
+    	 ng-click="itemClicked($index)"
+    	 class="col-md-2 animated">
+			<weather-report
+				weather-day="w"
+				convert-to-standard="convertToFarenheight(kTemp)" 
+				convert-to-date="convertToDate(dt)" 
+				to-title-case="toTitleCase(str)" 
+				dateFormat="MMM d, y">
+			</weather-report>
+	</div>
+</div>

@@ -1,0 +1,11 @@
+<div>
+	<h4>{{ convertToDate({ dt: weatherDay.dt }) | date: dateFormat }}</h4>
+	Temp: {{ convertToStandard({ kTemp: weatherDay.temp.day }) }}* <br>
+	Humidity: {{ weatherDay.humidity }}% <br>
+	Desc: {{ weatherDay.weather[0].main }} <br>
+	<span class="ellipsis" title="{{ toTitleCase({ str: weatherDay.weather[0].description }) }}">
+		More: {{ toTitleCase({ str: weatherDay.weather[0].description }) }}
+	</span>
+	Low: {{ convertToStandard({ kTemp: weatherDay.temp.min }) }}* <br>
+	High: {{ convertToStandard({ kTemp: weatherDay.temp.max }) }}*
+</div>
